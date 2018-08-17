@@ -2,36 +2,35 @@ apply plugin: 'com.android.application'
 
 android {
 
-    signingConfigs {
-        ouyangzx {
-            keyAlias 'EGAN'
-            keyPassword 'xiangshaono_4'
-            //keystore路径
-            storeFile file('E:/androidproject/pay-java-android/egan.jks')
-            storePassword 'xiangshaono_4'
-        }
-    }
+//    signingConfigs {
+//        ouyangzx {
+//            keyAlias 'EGAN'
+//            keyPassword 'xiangshaono_4'
+//            //keystore路径
+//            storeFile file('E:/androidproject/pay-java-android/egan.jks')
+//            storePassword 'xiangshaono_4'
+//        }
+//    }
 
 
-
-    compileSdkVersion 25
-    buildToolsVersion "25.0.2"
+    compileSdkVersion 26
+    buildToolsVersion "26.0.2"
     defaultConfig {
         applicationId "in.egan.pay"
         minSdkVersion 15
-        targetSdkVersion 25
+        targetSdkVersion 26
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
-            signingConfig signingConfigs.ouyangzx
+//            signingConfig signingConfigs.ouyangzx
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
         debug {
-            signingConfig signingConfigs.ouyangzx
+//            signingConfig signingConfigs.ouyangzx
         }
     }
 }
@@ -41,8 +40,8 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.android.support:appcompat-v7:25.2.0'
-    compile 'com.android.support.constraint:constraint-layout:1.0.1'
+    compile 'com.android.support:appcompat-v7:26.1.0'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.alibaba:fastjson:1.1.56.android'
     testCompile 'junit:junit:4.12'
     compile 'com.squareup.okhttp3:okhttp:3.6.0'
